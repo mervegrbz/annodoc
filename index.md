@@ -383,9 +383,15 @@ Finally, parses in the CoNLL-U format can be embedded as shown below:
 resulting in
 
 ~~~ conllu
-1    They    they    PRON    PRN    Case=Nom|Num=Plur            2    nsubj    _    _
-2    buy     buy     VERB    VBP    Num=Plur|Per=3|Tense=Pres    0    root     _    _
-3    books   book    NOUN    NNS    Num=Plur                     2    dobj     _    _
+# newdoc
+# newpar
+# sent_id = 1
+# text = Babam bana bal aldı.
+1	Babam	baba	NOUN	Noun	Case=Nom|Number=Sing|Number[psor]=Sing|Person=3|Person[psor]=1	4	nsubj	_	_
+2	bana	ben	PRON	Pers	Case=Dat|Number=Sing|Person=1|PronType=Prs	4	obl	_	_
+3	bal	bal	NOUN	Noun	Case=Nom|Number=Sing|Person=3	4	obj	_	_
+4	aldı	al	VERB	Verb	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Past	0	root	_	SpaceAfter=No
+5	.	.	PUNCT	Punc	_	4	punct	_	SpacesAfter=\n
 ~~~
 
 The remainder of this section provides further details for each
